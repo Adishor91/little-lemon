@@ -9,12 +9,12 @@ function App() {
     <>
       <div className="app-container">
         <div className="header-nav-container">
-        <Header />
-        <Nav />
+          <Header />
+          <Nav />
         </div>
+        <Main />
+        <Footer />
       </div>
-      <Main />
-      <Footer />
     </>
   );
 }
