@@ -127,6 +127,48 @@ a {
   font-weight: bold; /* Optional: Make the text bold */
 }
 
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.footer-column {
+  flex: 1;
+  padding: 10px;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-logo {
+  max-width: 100%;
+  height: auto;
+}
+
+.reserve-button {
+  background-color: #F4CE14;
+  color: #333333;
+  border: none;
+  border-radius: 16px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.reserve-button:hover {
+  background-color: #e0b10f;
+}
+
+.homepage img {
+  width: 334px;
+  height: 445px;
+}
+
 
 /* Responsive layout */
 @media (min-width: 600px) {

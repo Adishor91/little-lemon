@@ -1,5 +1,17 @@
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import HomePage from './HomePage';
+import BookingPage from './BookingPage';
+
 const Main = () => {
-    return <main className="main"></main>
+    return (
+        <main className="main">
+            <Routes>
+                <Route path="/" element={<HomePage />}></Route>
+                <Route path="/booking" element={<BookingPage />}></Route>
+            </Routes>
+        </main>
+    );
 };
 
 export default Main;
