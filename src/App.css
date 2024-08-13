@@ -88,15 +88,16 @@ a {
   text-decoration: none;
 }
 
+.header {
+  margin-left: 100px;
+  width: 30%;
+}
+
 .header-nav-container {
   display: flex; /* Use Flexbox to align items inline */
   justify-content: space-between; /* Optional: space between Header and Nav */
   align-items: center; /* Optional: vertically align items */
   padding: 1rem; /* Optional: padding around the container */
-}
-
-.header-nav-container > * {
-  margin: 0; /* Optional: remove default margins */
 }
 
 .header .logo img {
@@ -115,10 +116,12 @@ a {
   list-style-type: none; /* Remove the default list bullets */
   padding: 0; /* Remove default padding */
   margin: 0; /* Remove default margin */
+  flex-wrap: nowrap;
 }
 
 .nav-links li {
-  margin: 0 1rem; /* Optional: Add margin between list items */
+  margin: 0 10px;
+  padding: 10px;
 }
 
 .nav-links a {
@@ -156,7 +159,7 @@ a {
   color: #333333;
   border: none;
   border-radius: 16px;
-  padding: 10px 20px;
+  padding: 15px 30px;
   font-size: 16px;
   cursor: pointer;
   font-family: Arial, sans-serif;
@@ -205,6 +208,7 @@ a {
   font-weight: 500;
   font-size: 64px;
   color: #F4CE14;
+  margin-bottom: 0;
 }
 
 .hero-text > h3 {
@@ -212,6 +216,7 @@ a {
   font-weight: 400;
   font-size: 40px;
   color: #edefee;
+  margin-top: 0;
 }
 
 .hero-text > p {
