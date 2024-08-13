@@ -158,10 +158,15 @@ a {
   cursor: pointer;
   font-family: Arial, sans-serif;
   transition: background-color 0.3s ease;
+  margin-top: 10px;
 }
 
 .reserve-button:hover {
   background-color: #e0b10f;
+}
+
+.homepage {
+  background-color: #495e57;
 }
 
 .homepage img {
@@ -169,6 +174,33 @@ a {
   height: 445px;
 }
 
+.homepage.flex {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.hero-image {
+  max-width: 40%;
+  height: auto;
+}
+
+.hero-text {
+  max-width: 60%;
+}
+
+.hero-text > h1 {
+  color: #F4CE14;
+}
+
+.hero-text > h3 {
+  color: #edefee;
+}
+
+.hero-text > p {
+  color: #edefee;
+}
 
 /* Responsive layout */
 @media (min-width: 600px) {
