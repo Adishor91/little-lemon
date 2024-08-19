@@ -1,11 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Specials = () => {
     return (
         <section className="specials">
             <div className="title-and-button">
                 <h1>This weeks specials!</h1>
-                <button className="menu-button">Online menu</button>
+                <Link to ="/booking">
+                    <button className="menu-button">Online menu</button>
+                </Link>
             </div>
             <div className="food-container">
                 <div className="foods">

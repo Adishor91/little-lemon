@@ -1,13 +1,18 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+
 const Footer = () => {
     return (
         <footer className="footer">
           <div className="footer-column">
-            <img src="./icons_assets/footer-logo.2c859235d6c57bb54176.png" width="100" height="132" alt="Logo" className="footer-logo" />
+            <Link to="/">
+              <img src="./icons_assets/footer-logo.2c859235d6c57bb54176.png" width="100" height="132" alt="Logo" className="footer-logo" />
+            </Link>
           </div>
           <div className="footer-column">
             <h3>About Little Lemon</h3>
             <ul className="footer-links">
-              <li><a href="#home">Home</a></li>
+              <li><a href="/">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#menu">Menu</a></li>
               <li><a href="#reservations">Reservations</a></li>

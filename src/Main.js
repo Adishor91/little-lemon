@@ -1,16 +1,16 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Router, Routes, Route } from 'react-router-dom';
 import HomePage from './HomePage';
-import BookingPage from './BookingPage';
-import Specials from './Specials';
+import BookingPage from './OurMenu';
+import OurMenu from './OurMenu';
 
 const Main = () => {
     return (
         <main className="main">
             <Routes>
-                <Route path="/" element={<HomePage />}></Route>
-                <Route path="/specials" element={<Specials />}></Route>
-                <Route path="/booking" element={<BookingPage />}></Route>
+                 <Route path="/" element={<HomePage />}/>
+                 <Route path="/our-menu" element={<OurMenu />}/>
+                <Route path="/booking" element={<BookingPage />}/>
             </Routes>
         </main>
     );

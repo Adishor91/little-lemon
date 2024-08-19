@@ -1,7 +1,9 @@
-import React from 'react';
+import React from "react";
 
 const BookingPage = () => {
-  return <div>Booking Page</div>;
+    return (
+        <div>Adi e bun</div>
+    );
 };
 
 export default BookingPage;
