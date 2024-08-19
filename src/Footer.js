@@ -5,7 +5,7 @@ const Footer = () => {
             <img src="./icons_assets/footer-logo.2c859235d6c57bb54176.png" width="100" height="132" alt="Logo" className="footer-logo" />
           </div>
           <div className="footer-column">
-            <h3>Doormat Navigation</h3>
+            <h3>About Little Lemon</h3>
             <ul className="footer-links">
               <li><a href="#home">Home</a></li>
               <li><a href="#about">About</a></li>
@@ -18,9 +18,13 @@ const Footer = () => {
           <div className="footer-column">
             <h3>Contact</h3>
             <ul className="footer-links">
-              <li><a href="#address">Address</a></li>
-              <li><a href="tel:+123456789">Phone Number</a></li>
-              <li><a href="mailto:info@example.com">Email</a></li>
+              <li>Little Lemon<br />
+                  1234 Culinary Lane<br />
+                  Flavorsville, CA 90210<br />
+                  United States
+              </li>
+              <li>(555) 123-4567</li>
+              <li><a href="mailto:contact@littlelemon.com">contact@littlelemon.com</a></li>
             </ul>
           </div>
           <div className="footer-column">

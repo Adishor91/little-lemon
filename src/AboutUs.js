@@ -12,8 +12,8 @@ const AboutUs = () => {
                     </p>
                 </div>
                 <div className="about-us-image">
-                    <img src="/icons_assets/Mario and Adrian 1. jpg" alt="Mario and Adrian 1"/>
-                    <img src="/icons_assets/Mario and Adrian 2. jpg" alt="Mario and Adrian 2"/>
+                    <img src="/icons_assets/Mario and Adrian 1.jpg" alt="Mario and Adrian 1"/>
+                    <img src="/icons_assets/Mario and Adrian 2.jpg" alt="Mario and Adrian 2"/>
                 </div>
             </div>
         </section>
