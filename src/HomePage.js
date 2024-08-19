@@ -1,6 +1,7 @@
 import React from "react";
 import Specials from "./Specials";
 import CustomersSay from "./CustomersSay";
+import AboutUs from "./AboutUs";
 
 const HomePage = () => {
     return (
@@ -16,6 +17,7 @@ const HomePage = () => {
             </section>
             <Specials />
             <CustomersSay />
+            <AboutUs />
         </>
     );
 };

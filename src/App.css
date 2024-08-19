@@ -413,11 +413,11 @@ a {
 .customer-image {
   border-radius: 50%;
   display: block;
-  height: 100px;
+  height: 200px;
   margin: 0 auto;
   object-fit: cover;
   object-position: top;
-  width: 100px;
+  width: 200px;
 }
 
 .customer h5 {
