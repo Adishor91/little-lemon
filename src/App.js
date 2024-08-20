@@ -4,22 +4,18 @@ import Header from './Header';
 import Nav from './Nav';
 import Main from './Main';
 import Footer from './Footer';
-import { BrowserRouter as Router } from 'react-router-dom'; // Import BrowserRouter
 
 function App() {
   return (
-    <Router> {
-      <div className="app-container">
-        <div className="header-nav-container">
-          <Header />
-          <Nav />
-        </div>
-        <Main />
-        <Footer />
+    <div className="app-container">
+      <div className="header-nav-container">
+        <Header />
+        <Nav />
       </div>
-      };
-    </Router>
+      <Main />
+      <Footer />
+    </div>
   );
-};
+}
 
 export default App;

@@ -479,7 +479,6 @@ a {
   justify-content: space-between;
   align-items: flex-start;
   padding: 20px;
-  margin: 0 50px;
 }
 
 .footer-column {
@@ -600,16 +599,18 @@ select {
 }
 
 input[type="submit"] {
-  background-color: #007bff;
-  color: #fff;
+  font-family: 'Karla', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  background-color: #F4CE14;
+  color: #333333;
   padding: 10px 15px;
   border: none;
-  border-radius: 4px;
-  font-size: 1rem;
+  border-radius: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 input[type="submit"]:hover {
-  background-color: #0056b3;
+  background-color: #e3b704;
 }
