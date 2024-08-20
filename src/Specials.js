@@ -6,7 +6,7 @@ const Specials = () => {
         <section className="specials">
             <div className="title-and-button">
                 <h1>This weeks specials!</h1>
-                <Link to ="/booking">
+                <Link to ="/our-menu">
                     <button className="menu-button">Online menu</button>
                 </Link>
             </div>

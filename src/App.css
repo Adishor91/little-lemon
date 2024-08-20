@@ -91,6 +91,7 @@ a {
 .nav-links {
   display: flex; /* Flexbox on the ul to align its children (li) horizontally */
   justify-content:flex-end;
+  align-items: ce;
   width: 100%;
   list-style-type: none; /* Remove the default list bullets */
   padding: 0; /* Remove default padding */
@@ -105,10 +106,10 @@ a {
 
 .nav-links a {
   color: #333333;
-  text-decoration: none; /* Remove underline from links */
+  text-decoration: none;
   font-family: 'Karla', sans-serif;
-  font-size: 32px;
-  font-weight: bold; /* Optional: Make the text bold */
+  font-size: 20px;
+  font-weight: 800;
 }
 
 .reserve-button {
@@ -525,7 +526,7 @@ a {
   width: 100%;
   max-width: 1500px;
   height: auto;
-  border-radius: 16px; /* Optional: add some rounding to the image corners */
+  border-radius: 16px;
 }
 
 .centered-button {
@@ -546,4 +547,12 @@ a {
 
 .centered-button:hover {
   background-color: #e0b10f;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the form horizontally */
+  justify-content: center;
+  height: 100vh; /* Optional: To center it vertically as well */
 }
