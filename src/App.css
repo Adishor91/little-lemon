@@ -554,5 +554,62 @@ a {
   flex-direction: column;
   align-items: center; /* Centers the form horizontally */
   justify-content: center;
-  height: 100vh; /* Optional: To center it vertically as well */
+}
+
+.booking-title {
+  font-family: 'Markazi Text', serif;
+  font-weight: 500;
+  font-size: 92px;
+  color: #F4CE14;
+  margin-bottom: 0;
+}
+
+.booking-subtitle {
+  font-family: 'Markazi Text', serif;
+  font-weight: 400;
+  font-size: 52px;
+  color: #333333;
+  margin-top: 0;
+}
+
+.booking-text {
+  font-family: 'Karla', sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  color: #333333;
+}
+
+form {
+  display: grid;
+  gap: 15px;
+}
+
+label {
+  font-size: 1rem;
+  color: #555;
+}
+
+input[type="date"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
 }
