@@ -21,7 +21,7 @@ const Specials = () => {
                         <p>The famous greek salad of crispy lettuce, peppers, olives and our chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.</p>
                         <div className="button-and-icon">
                             <button>Order for delivery</button>
-                            <img src="/icons_assets/basket.svg" width="20" height="20" viewBox="0 0 46 47" fill="none"/>
+                            <img src="/icons_assets/basket.svg" width="20" height="20" viewBox="0 0 46 47" fill="none" alt="basket"/>
                         </div>
                     </div>
                 </div>
@@ -35,7 +35,7 @@ const Specials = () => {
                         <p>Au Bruchetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.</p>
                         <div className="button-and-icon">
                             <button>Order for delivery</button>
-                            <img src="/icons_assets/basket.svg" width="20" height="20" viewBox="0 0 46 47" fill="none"/>
+                            <img src="/icons_assets/basket.svg" width="20" height="20" viewBox="0 0 46 47" fill="none" alt="basket"/>
                         </div>
                     </div>
                 </div>
@@ -49,7 +49,7 @@ const Specials = () => {
                         <p>Thie comes straight from grandma's recipe book, every last ingredient has been sourced and is as authentic as can be imagined.</p>
                         <div className="button-and-icon">
                             <button>Order for delivery</button>
-                            <img src="/icons_assets/basket.svg" width="20" height="20" viewBox="0 0 46 47" fill="none"/>
+                            <img src="/icons_assets/basket.svg" width="20" height="20" viewBox="0 0 46 47" fill="none" alt="basket"/>
                         </div>
                     </div>
                 </div>
