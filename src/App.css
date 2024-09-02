@@ -614,3 +614,21 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #e3b704;
 }
+
+.confirmed-booking {
+  text-align: center;
+  padding: 50px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: 50px auto;
+}
+
+.confirmed-booking h1 {
+  color: #28a745;
+}
+
+.confirmed-booking p {
+  font-size: 16px;
+  color: #333;
+}

@@ -1,35 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
-const fetchAPI = window.fetchAPI;
-const submitAPI = window.submitAPI;
-
-const BookingForm = () => {
+const BookingForm = ({ availableTimes, submitForm }) => {
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
   const [guests, setGuests] = useState(1);
   const [occasion, setOccasion] = useState('');
-  const [availableTimes, setAvailableTimes] = useState([]);
 
-  const initializeTimes = async () => {
-    try {
-      const today = new Date().toISOString().split('T')[0]; 
-      const times = await fetchAPI(today);
-      setAvailableTimes(times);
-    } catch (error) {
-      console.error("Error initializing available times:", error);
-    }
-  };
-
-  const updateTimes = async (selectedDate) => {
-    try {
-      const times = await fetchAPI(selectedDate);
-      setAvailableTimes(times);
-    } catch (error) {
-      console.error("Error updating available times:", error);
-    }
-  };
-
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     const formData = {
@@ -39,26 +16,12 @@ const BookingForm = () => {
       occasion,
     };
 
-    try {
-      const success = await submitAPI(formData);
-      if (success) {
-        alert('Reservation made successfully!');
-      } else {
-        alert('Failed to make reservation. Please try again.');
-      }
-    } catch (error) {
-      console.error("Error submitting form data:", error);
-    }
+    // Call the submitForm function passed as a prop
+    submitForm(formData);
   };
 
   useEffect(() => {
-    initializeTimes();
-  }, []);
-
-  useEffect(() => {
-    if (date) {
-      updateTimes(date);
-    }
+    // If needed, update available times or other logic
   }, [date]);
 
   return (

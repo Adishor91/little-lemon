@@ -1,10 +1,10 @@
 import React from 'react';
 import BookingForm from './BookingForm'; // Import BookingForm component
 
-const BookingPage = ({ availableTimes }) => {
+const BookingPage = ({ availableTimes, submitForm }) => {
   return (
     <div>
-      <BookingForm availableTimes={availableTimes} />
+      <BookingForm availableTimes={availableTimes} submitForm={submitForm} />
     </div>
   );
 };
