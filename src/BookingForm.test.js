@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect'; // For custom matchers like toBeInTheDocument
+import '@testing-library/jest-dom/extend-expect';
 import BookingForm from './BookingForm';
 
 describe('BookingForm', () => {
@@ -10,7 +10,6 @@ describe('BookingForm', () => {
   test('renders static text in BookingForm component', () => {
     render(<BookingForm availableTimes={availableTimes} submitForm={mockSubmitForm} />);
 
-    // Check for static text
     expect(screen.getByText('Little Lemon')).toBeInTheDocument();
     expect(screen.getByText('Chicago')).toBeInTheDocument();
     expect(screen.getByText('Find a table for any occasion')).toBeInTheDocument();
@@ -37,7 +36,7 @@ describe('BookingForm', () => {
     expect(timeSelect).toBeInTheDocument();
     expect(timeSelect).toHaveAttribute('required');
 
-    // Check if options are rendered
+
     expect(screen.getByText('Select a time')).toBeInTheDocument();
     availableTimes.forEach(time => {
       expect(screen.getByText(time)).toBeInTheDocument();
@@ -62,7 +61,6 @@ describe('BookingForm', () => {
     const occasionSelect = screen.getByLabelText(/Occasion/i);
     expect(occasionSelect).toBeInTheDocument();
 
-    // Check if options are rendered
     expect(screen.getByText('Select an occasion')).toBeInTheDocument();
     expect(screen.getByText('Birthday')).toBeInTheDocument();
     expect(screen.getByText('Anniversary')).toBeInTheDocument();
@@ -75,12 +73,10 @@ describe('BookingForm', () => {
     expect(submitButton).toBeInTheDocument();
     expect(submitButton).toBeDisabled();
 
-    // Simulate user input to enable the submit button
     fireEvent.change(screen.getByLabelText(/Choose date/i), { target: { value: '2024-12-25' } });
     fireEvent.change(screen.getByLabelText(/Choose time/i), { target: { value: '12:00' } });
     fireEvent.change(screen.getByLabelText(/Number of guests/i), { target: { value: '2' } });
 
-    // Check if the button is enabled after valid input
     expect(submitButton).toBeEnabled();
   });
 });
