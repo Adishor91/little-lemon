@@ -5,6 +5,17 @@ const BookingForm = ({ availableTimes, submitForm }) => {
   const [time, setTime] = useState('');
   const [guests, setGuests] = useState(1);
   const [occasion, setOccasion] = useState('');
+  const [isFormValid, setIsFormValid] = useState(false);
+
+  useEffect(() => {
+    const validateForm = () => {
+      // Ensure all fields meet the required conditions
+      const isValid = date && time && guests >= 1 && guests <= 10;
+      setIsFormValid(isValid);
+    };
+
+    validateForm();
+  }, [date, time, guests]); // Validate the form whenever these values change
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,10 +31,6 @@ const BookingForm = ({ availableTimes, submitForm }) => {
     submitForm(formData);
   };
 
-  useEffect(() => {
-    // If needed, update available times or other logic
-  }, [date]);
-
   return (
     <div className="booking-form">
       <h1 className="booking-title">Little Lemon</h1>
@@ -37,6 +44,7 @@ const BookingForm = ({ availableTimes, submitForm }) => {
           id="res-date"
           value={date}
           onChange={(e) => setDate(e.target.value)}
+          required
         />
 
         <label htmlFor="res-time">Choose time</label>
@@ -44,7 +52,9 @@ const BookingForm = ({ availableTimes, submitForm }) => {
           id="res-time"
           value={time}
           onChange={(e) => setTime(e.target.value)}
+          required
         >
+          <option value="" disabled>Select a time</option>
           {availableTimes.map((availableTime) => (
             <option key={availableTime} value={availableTime}>
               {availableTime}
@@ -60,7 +70,8 @@ const BookingForm = ({ availableTimes, submitForm }) => {
           min="1"
           max="10"
           value={guests}
-          onChange={(e) => setGuests(e.target.value)}
+          onChange={(e) => setGuests(parseInt(e.target.value, 10))}
+          required
         />
 
         <label htmlFor="occasion">Occasion</label>
@@ -74,7 +85,12 @@ const BookingForm = ({ availableTimes, submitForm }) => {
           <option value="Anniversary">Anniversary</option>
         </select>
 
-        <input type="submit" value="Make Your reservation" className="submit-reservation-button" />
+        <input
+          type="submit"
+          value="Make Your reservation"
+          className="submit-reservation-button"
+          disabled={!isFormValid}
+        />
       </form>
     </div>
   );

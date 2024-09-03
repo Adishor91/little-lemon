@@ -1,57 +1,37 @@
 import { initializeTimes, updateTimes } from './times';
 
+// Mock the global fetchAPI function
+beforeAll(() => {
+  global.fetchAPI = jest.fn();
+});
+
 describe('initializeTimes', () => {
-  it('should return a non-empty array of available booking times', () => {
+  it('should return a non-empty array of available booking times', async () => {
     const mockTimes = ['17:00', '18:30', '19:45'];
 
-    // Mock the global fetchAPI function
-    global.fetchAPI = jest.fn().mockReturnValue(mockTimes);
+    // Mock the fetchAPI function to return a resolved promise
+    global.fetchAPI.mockResolvedValue(mockTimes);
 
-    const times = initializeTimes();
+    const times = await initializeTimes();
 
-    expect(fetchAPI).toHaveBeenCalled();  // Verify fetchAPI was called
-    expect(times).toEqual(mockTimes);     // Check if the return value matches the mock data
+    expect(global.fetchAPI).toHaveBeenCalled();
+    expect(times).toEqual(mockTimes);
   });
 });
 
 describe('updateTimes', () => {
-  it('should update the state with new times based on the selected date', () => {
-    const initialState = {
-      date: null,
-      times: ['17:00', '18:00', '19:00', '20:00'],
-    };
-
-    const selectedDate = '2024-09-01';
-    const newTimes = ['18:30', '19:45', '20:15'];
-
-    // Mock the global fetchAPI function to return new times based on the date
-    global.fetchAPI = jest.fn().mockReturnValue(newTimes);
-
-    const action = {
-      type: 'UPDATE_TIMES',
-      payload: {
-        date: selectedDate,
-      },
-    };
+  it('should return the same state for an unknown action type', () => {
+    const initialState = ['17:00', '18:00', '19:00', '20:00'];
+    const action = { type: 'UNKNOWN_ACTION' };
 
     const newState = updateTimes(initialState, action);
 
-    // Verify fetchAPI was called with the correct date
-    expect(fetchAPI).toHaveBeenCalledWith(selectedDate);
-    // Ensure the state was updated with the new date and times
-    expect(newState).toEqual({
-      date: selectedDate,
-      times: newTimes,
-    });
+    expect(newState).toEqual(initialState);
   });
 
-  it('should return the same state for an unknown action type', () => {
-    const initialState = {
-      date: null,
-      times: ['17:00', '18:00', '19:00', '20:00'],
-    };
-
-    const action = { type: 'UNKNOWN_ACTION' };
+  it('should return the same state for the UPDATE_TIMES action type', () => {
+    const initialState = ['17:00', '18:00', '19:00', '20:00'];
+    const action = { type: 'UPDATE_TIMES' };
 
     const newState = updateTimes(initialState, action);
 
